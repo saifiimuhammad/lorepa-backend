@@ -14,12 +14,13 @@ const client = twilio(accountSid, authToken);
 
 module.exports = {
   uploadFile: async (file) => {
-    const uniqueFilename = `${Date.now()}-${file.originalname}`;
-    const storageRef = ref(storage, `${uniqueFilename}`);
-    await uploadBytes(storageRef, file.buffer);
-    const result = await getDownloadURL(storageRef);
-    let downloadUrl = result;
-    return downloadUrl;
+    // const uniqueFilename = `${Date.now()}-${file.originalname}`;
+    // const storageRef = ref(storage, `${uniqueFilename}`);
+    // await uploadBytes(storageRef, file.buffer);
+    // const result = await getDownloadURL(storageRef);
+    // let downloadUrl = result;
+    // return downloadUrl;
+    return "";
   },
   sendOtp: async (phoneNumber, otp) => {
     try {
